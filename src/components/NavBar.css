@@ -29,3 +29,39 @@
 .hambur {
   display: none;
 }
+
+@media only screen and (max-width: 700px) {
+  .nav-wrap {
+    position: relative;
+  }
+  .nav-list {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    right: 0;
+    top: 2rem;
+    padding: 2rem 0 6rem 0;
+    transform: translateX(100%);
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    background-image: linear-gradient(
+      to left,
+      rgb(0, 132, 219),
+      rgba(0, 0, 0, 0.233)
+    );
+    transition: 1s ease;
+  }
+
+  .hambur {
+    position: absolute;
+    display: block;
+    top: 9px;
+    right: 20px;
+    z-index: 1;
+  }
+
+  .active {
+    transform: translateX(0);
+  }
+}

@@ -25,11 +25,6 @@ function NavBar() {
       url: "#",
       cName: "nav-items",
     },
-    {
-      title: <i className={clicked ? "fa fa-times" : "fa fa-bars"}></i>,
-      url: "#",
-      cName: "hambur",
-    },
   ]);
   return (
     <>
@@ -38,7 +33,15 @@ function NavBar() {
           <p className="name">React</p>
           <i class="fab fa-phoenix-squadron"></i>
         </div>
-        <ul className="nav-list">
+        <div
+          className="hambur"
+          onClick={() => {
+            setclicked(!clicked);
+          }}
+        >
+          <i className={clicked ? "fa fa-times" : "fa fa-bars"}></i>
+        </div>
+        <ul className={clicked ? "nav-list active" : "nav-list "}>
           {MenuItem.map((item) => {
             return (
               <li className={item.cName} href={item.url}>
