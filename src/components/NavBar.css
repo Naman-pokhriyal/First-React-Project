@@ -1,4 +1,11 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .nav-wrap {
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -7,7 +14,7 @@
   height: 2rem;
   background-image: linear-gradient(
     to left,
-    rgb(0, 132, 219),
+    rgb(0, 219, 190),
     rgba(0, 0, 0, 0.233)
   );
 }
@@ -15,9 +22,10 @@
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 30px;
 }
-.name {
-  margin-right: 10px;
+.logo i {
+  padding-left: 10px;
 }
 
 .nav-list {
@@ -30,9 +38,21 @@
   display: none;
 }
 
-@media only screen and (max-width: 700px) {
+.nav-items {
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  padding: 9px 0;
+}
+.nav-items:hover {
+  border-bottom: solid 2px black;
+}
+
+@media only screen and (max-width: 760px) {
   .nav-wrap {
-    position: relative;
+    position: sticky;
   }
   .nav-list {
     position: fixed;
@@ -47,10 +67,19 @@
     align-items: center;
     background-image: linear-gradient(
       to left,
-      rgb(0, 132, 219),
+      rgb(0, 219, 190),
       rgba(0, 0, 0, 0.233)
     );
     transition: 1s ease;
+  }
+  .nav-items {
+    padding: 0;
+    height: 20%;
+  }
+  .nav-items:hover {
+    color: azure;
+    transition: all 0.5s;
+    border: none;
   }
 
   .hambur {
@@ -59,9 +88,17 @@
     top: 9px;
     right: 20px;
     z-index: 1;
+    cursor: pointer;
+  }
+
+  .hambur:hover {
+    transform: rotateZ(360deg);
+    transition: 1s;
   }
 
   .active {
     transform: translateX(0);
   }
 }
+
+/* rgb(0, 132, 219), */

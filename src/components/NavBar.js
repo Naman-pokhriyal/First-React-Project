@@ -29,10 +29,10 @@ function NavBar() {
   return (
     <>
       <nav className="nav-wrap">
-        <div className="logo">
-          <p className="name">React</p>
+        <a className="logo" href="#.com">
+          React
           <i class="fab fa-phoenix-squadron"></i>
-        </div>
+        </a>
         <div
           className="hambur"
           onClick={() => {
@@ -44,9 +44,9 @@ function NavBar() {
         <ul className={clicked ? "nav-list active" : "nav-list "}>
           {MenuItem.map((item) => {
             return (
-              <li className={item.cName} href={item.url}>
-                {item.title}
-              </li>
+              <a className={item.cName} href={item.url}>
+                <li>{item.title}</li>
+              </a>
             );
           })}
         </ul>
