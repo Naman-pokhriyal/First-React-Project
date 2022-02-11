@@ -15,7 +15,7 @@ a {
   background-image: linear-gradient(
     to left,
     rgb(0, 219, 190),
-    rgba(0, 0, 0, 0.233)
+    rgb(187, 187, 187)
   );
 }
 .logo {
@@ -68,8 +68,9 @@ a {
     background-image: linear-gradient(
       to left,
       rgb(0, 219, 190),
-      rgba(0, 0, 0, 0.233)
+      rgb(187, 187, 187)
     );
+    opacity: 1;
     transition: 1s ease;
   }
   .nav-items {

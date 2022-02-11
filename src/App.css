@@ -1,0 +1,31 @@
+main {
+  background-image: linear-gradient(
+    to left,
+    rgb(0, 219, 190),
+    rgb(187, 187, 187)
+  );
+  height: 93vh;
+  padding: 2rem;
+}
+
+.deck {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+
+.Add {
+  width: 200px;
+  height: 200px;
+  align-self: center;
+  margin: auto;
+}
+.in-add,
+.in-img {
+  width: 200px;
+}
+
+.btn-add {
+  width: 180px;
+  margin: 10px;
+}

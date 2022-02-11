@@ -21,7 +21,7 @@ function NavBar() {
       cName: "nav-items",
     },
     {
-      title: "About Me",
+      title: "About",
       url: "#",
       cName: "nav-items",
     },
